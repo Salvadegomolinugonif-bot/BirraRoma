@@ -1,182 +1,152 @@
 let birre = [];
 
 async function caricaPrezzi() {
+    const results = document.getElementById("results");
+
     try {
-        const risposta = await fetch(`prezzi.json?t=${Date.now()}`, { cache: "no-store" });
+        results.innerHTML = "<p>Caricamento birre...</p>";
+
+        const risposta = await fetch("./prezzi.json?t=" + Date.now(), {
+            cache: "no-store"
+        });
 
         if (!risposta.ok) {
-            throw new Error("Database non disponibile");
+            throw new Error("Errore HTTP " + risposta.status);
         }
 
         birre = await risposta.json();
 
-        applicaFiltri();
+        if (!Array.isArray(birre)) {
+            throw new Error("prezzi.json non contiene un array");
+        }
+
+        popolaSupermercati(birre);
+        mostraBirre(birre);
 
     } catch (errore) {
-        console.error(errore);
-
-        document.getElementById("results").innerHTML = `
-            <div class="error-box">
-                ⚠️ Impossibile caricare i prezzi.
-                <br><br>
-                Avvia BirraRoma tramite il server locale.
-            </div>
-        `;
+        console.error("Errore caricamento prezzi:", errore);
+        results.innerHTML =
+            "<p>Errore nel caricamento dei prezzi.</p>";
     }
+}
+
+function popolaSupermercati(dati) {
+    const filtro = document.getElementById("supermarketFilter");
+
+    if (!filtro) return;
+
+    const supermercati = [...new Set(
+        dati.map(b => b.supermercato).filter(Boolean)
+    )].sort();
+
+    filtro.innerHTML = '<option value="">Tutti i supermercati</option>';
+
+    supermercati.forEach(supermercato => {
+        const option = document.createElement("option");
+        option.value = supermercato;
+        option.textContent = supermercato;
+        filtro.appendChild(option);
+    });
+}
+
+function mostraBirre(dati) {
+    const results = document.getElementById("results");
+
+    if (!results) return;
+
+    if (!dati.length) {
+        results.innerHTML = "<p>Nessuna birra trovata.</p>";
+        return;
+    }
+
+    const ordinati = [...dati].sort(
+        (a, b) => Number(a.prezzoLitro) - Number(b.prezzoLitro)
+    );
+
+    results.innerHTML = ordinati.map((birra, indice) => `
+        <article class="beer-card">
+            <div class="beer-name">
+                ${birra.nome || ""}
+            </div>
+
+            <div class="format">
+                ${birra.formato || ""}
+            </div>
+
+            <div class="supermarket">
+                🛒 ${birra.supermercato || ""}
+            </div>
+
+            <div class="price">
+                €${Number(birra.prezzo).toFixed(2)}
+            </div>
+
+            <div class="price-liter">
+                €${Number(birra.prezzoLitro).toFixed(2)} / litro
+            </div>
+
+            ${
+                birra.offerta
+                ? `<div class="offer">🔥 OFFERTA</div>`
+                : ""
+            }
+
+            ${
+                indice === 0
+                ? `<div class="best-price">⭐ MIGLIOR PREZZO</div>`
+                : ""
+            }
+        </article>
+    `).join("");
 }
 
 function applicaFiltri() {
     const testo = document
         .getElementById("searchInput")
-        .value
+        ?.value
         .toLowerCase()
-        .trim();
+        .trim() || "";
 
     const supermercato =
-        document.getElementById("supermarketFilter").value;
+        document.getElementById("supermarketFilter")?.value || "";
 
-    let risultati = [...birre];
+    let risultati = birre;
 
-    if (supermercato !== "Tutti") {
-        risultati = risultati.filter(
-            birra => birra.supermercato === supermercato
+    if (testo) {
+        risultati = risultati.filter(b =>
+            String(b.nome || "").toLowerCase().includes(testo)
         );
     }
 
-    if (testo) {
-        risultati = risultati.filter(
-            birra => birra.nome.toLowerCase().includes(testo)
+    if (supermercato) {
+        risultati = risultati.filter(b =>
+            b.supermercato === supermercato
         );
     }
 
     mostraBirre(risultati);
 }
 
-function mostraBirre(lista) {
-    const results = document.getElementById("results");
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const supermarketFilter =
+        document.getElementById("supermarketFilter");
 
-    if (lista.length === 0) {
-        results.innerHTML = `
-            <div class="empty-box">
-                🔎 Nessuna birra trovata.
-            </div>
-        `;
-        return;
+    if (searchInput) {
+        searchInput.addEventListener("input", applicaFiltri);
+
+        searchInput.addEventListener("keydown", event => {
+            if (event.key === "Enter") {
+                applicaFiltri();
+            }
+        });
     }
 
-    const ordinata = [...lista].sort(
-        (a, b) => a.prezzo - b.prezzo
-    );
+    if (supermarketFilter) {
+        supermarketFilter.addEventListener("change", applicaFiltri);
+    }
 
-    const migliorPrezzo = ordinata[0].prezzo;
-
-    results.innerHTML = ordinata.map(birra => {
-
-        const migliore =
-            birra.prezzo === migliorPrezzo;
-
-        const prezzoLitro =
-            birra.prezzoLitro != null
-                ? `€${Number(birra.prezzoLitro).toFixed(2)} / litro`
-                : "Prezzo al litro non disponibile";
-
-        return `
-            <article class="beer-card ${migliore ? "best-price" : ""}">
-
-                ${migliore ? `
-                    <div class="best-badge">
-                        🏆 MIGLIOR PREZZO
-                    </div>
-                ` : ""}
-
-                <div class="beer-icon">🍺</div>
-
-                <h3>${birra.nome}</h3>
-
-                <div class="format">
-                    ${birra.formato}
-                </div>
-
-                <div class="supermarket">
-                    🛒 ${birra.supermercato}
-                </div>
-
-                <div class="price">
-                    €${Number(birra.prezzo).toFixed(2)}
-                </div>
-
-                <div class="price-liter">
-                    ${prezzoLitro}
-                </div>
-
-                ${birra.offerta ? `
-                    <div class="offer">
-                        🔥 OFFERTA
-                    </div>
-                ` : ""}
-
-                ${birra.validita ? `
-                    <div class="validity">
-                        ⏳ ${birra.validita}
-                    </div>
-                ` : ""}
-
-                <div class="date">
-                    📅 Rilevato il ${birra.dataRilevazione}
-                </div>
-
-            </article>
-        `;
-
-    }).join("");
-}
-
-function cercaBirra() {
-    applicaFiltri();
-}
-
-document
-    .getElementById("searchInput")
-    .addEventListener("keyup", function(event) {
-
-        if (event.key === "Enter") {
-            cercaBirra();
-        }
-
-    });
-
-document
-    .getElementById("searchInput")
-    .addEventListener("input", applicaFiltri);
-
-document
-    .getElementById("supermarketFilter")
-    .addEventListener("change", applicaFiltri);
-
-document
-    .getElementById("backButton")
-    .addEventListener("click", function() {
-
-        document.getElementById("searchInput").value = "";
-        document.getElementById("supermarketFilter").value = "Tutti";
-        this.style.display = "none";
-
-        mostraBirre(birre);
-    });
-
-document
-    .getElementById("searchInput")
-    .addEventListener("input", function() {
-
-        document.getElementById("backButton").style.display =
-            this.value.trim() ? "inline-block" : "none";
-
-    });
-
-caricaPrezzi();
-
-
-/* Aggiornamento automatico ogni 30 minuti */
-setInterval(() => {
     caricaPrezzi();
-}, 30 * 60 * 1000);
+});
+
+setInterval(caricaPrezzi, 30 * 60 * 1000);
