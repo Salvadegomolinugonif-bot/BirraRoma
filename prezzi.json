@@ -408,10 +408,10 @@
   },
   {
     "nome": "Peroni Birra o Peroni Chill Lemon",
-    "formato": "Conf. 3 pezzi",
+    "formato": "Conf. 3 pezzi da 330 ml (990 ml)",
     "supermercato": "Carrefour",
     "prezzo": 1.99,
-    "prezzoLitro": null,
+    "prezzoLitro": 2.01,
     "offerta": true,
     "dataRilevazione": "04/10/2026",
     "fonte": "https://www.prezzinvista.it/carrefour/roma/"
@@ -478,10 +478,10 @@
   },
   {
     "nome": "Corona Extra / Cero",
-    "formato": "3 pezzi",
+    "formato": "Conf. 3 pezzi da 330 ml (990 ml)",
     "supermercato": "PAM",
     "prezzo": 1.19,
-    "prezzoLitro": null,
+    "prezzoLitro": 1.2,
     "offerta": true,
     "dataRilevazione": "04/10/2026",
     "fonte": "https://www.prezzinvista.it/pam/roma/"
