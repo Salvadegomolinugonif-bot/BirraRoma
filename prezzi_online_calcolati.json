@@ -1,0 +1,262 @@
+[
+  {
+    "nome": "Birra Moretti Ricetta Originale",
+    "formato": "Conf. 6 pezzi 330 ml Cad.",
+    "supermercato": "Carrefour",
+    "prezzo": 3.99,
+    "prezzoLitro": 2.02,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Peroni Nastro Azzurro Stile Capri",
+    "formato": "330 ml",
+    "supermercato": "Carrefour",
+    "prezzo": 0.69,
+    "prezzoLitro": 2.09,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Peroni Birra o Peroni Chill Lemon",
+    "formato": "Conf. 3 pezzi",
+    "supermercato": "Carrefour",
+    "prezzo": 1.99,
+    "prezzoLitro": null,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Bavaria Premium Beer",
+    "formato": "500 ml",
+    "supermercato": "Carrefour",
+    "prezzo": 0.79,
+    "prezzoLitro": 1.58,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Ceres Strong Ale",
+    "formato": "500 ml",
+    "supermercato": "Carrefour",
+    "prezzo": 1.49,
+    "prezzoLitro": 2.98,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Heineken Heineken",
+    "formato": "660 ml",
+    "supermercato": "Carrefour",
+    "prezzo": 0.99,
+    "prezzoLitro": 1.5,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/carrefour/roma/"
+  },
+  {
+    "nome": "Heineken Birra",
+    "formato": "33 cl",
+    "supermercato": "Conad",
+    "prezzo": 1.57,
+    "prezzoLitro": 4.76,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/conad/roma/"
+  },
+  {
+    "nome": "11 Paralleli Birra Bionda",
+    "formato": "3x33 cl",
+    "supermercato": "Conad",
+    "prezzo": 1.76,
+    "prezzoLitro": 1.78,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/conad/roma/"
+  },
+  {
+    "nome": "Peroni Birra",
+    "formato": "66 cl",
+    "supermercato": "Conad",
+    "prezzo": 0.99,
+    "prezzoLitro": 1.5,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/conad/roma/"
+  },
+  {
+    "nome": "Ceres Strong Ale",
+    "formato": "4x33 cl",
+    "supermercato": "Conad",
+    "prezzo": 5.43,
+    "prezzoLitro": 4.11,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/conad/roma/"
+  },
+  {
+    "nome": "LEFFE Birra Rouge",
+    "formato": "330 ml bottiglia",
+    "supermercato": "Lidl",
+    "prezzo": 1.39,
+    "prezzoLitro": 4.21,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/lidl/roma/"
+  },
+  {
+    "nome": "Corona Extra / Cero",
+    "formato": "3 pezzi",
+    "supermercato": "PAM",
+    "prezzo": 1.19,
+    "prezzoLitro": null,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/pam/roma/"
+  },
+  {
+    "nome": "Munsterbräu Birra lager",
+    "formato": "10 x 25 cl",
+    "supermercato": "Todis",
+    "prezzo": 3.89,
+    "prezzoLitro": 1.56,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/todis/roma/"
+  },
+  {
+    "nome": "L'Arte Birra artigianale sale marino",
+    "formato": "75 cl - € 3,99 al L",
+    "supermercato": "Todis",
+    "prezzo": 2.99,
+    "prezzoLitro": 3.99,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/todis/roma/"
+  },
+  {
+    "nome": "Van Pur Birra extra strong 12°",
+    "formato": "50 cl",
+    "supermercato": "Todis",
+    "prezzo": 1.19,
+    "prezzoLitro": 2.38,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/todis/roma/"
+  },
+  {
+    "nome": "Raffo Birra 4,7°",
+    "formato": "3x33 cl",
+    "supermercato": "Todis",
+    "prezzo": 2.49,
+    "prezzoLitro": 2.52,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/todis/roma/"
+  },
+  {
+    "nome": "Best Brau Birra",
+    "formato": "330 ml",
+    "supermercato": "Eurospin",
+    "prezzo": 0.39,
+    "prezzoLitro": 1.18,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/eurospin/roma/"
+  },
+  {
+    "nome": "Best Brau Birra premium strong doppio malto",
+    "formato": "500 ml",
+    "supermercato": "Eurospin",
+    "prezzo": 0.65,
+    "prezzoLitro": 1.3,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/eurospin/roma/"
+  },
+  {
+    "nome": "Best Bräu Birra Lager",
+    "formato": "1 l",
+    "supermercato": "Eurospin",
+    "prezzo": 0.99,
+    "prezzoLitro": 0.99,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/eurospin/roma/"
+  },
+  {
+    "nome": "Heineken Original 66 cl",
+    "formato": "66 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 0.99,
+    "prezzoLitro": 1.5,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "Corona Extra Birra lager internazionale bottiglia 6X33 cl",
+    "formato": "6 x 33 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 5.99,
+    "prezzoLitro": 3.03,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "BECK'S Birra pilsner tedesca bottiglia grafica FIFA 6x33cl",
+    "formato": "6 x 33 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 3.29,
+    "prezzoLitro": 1.66,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "MENABREA Original OW 3 x 0,33 l",
+    "formato": "3 x 33 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 1.99,
+    "prezzoLitro": 2.01,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "Peroncino Birra 6 x 25 cl",
+    "formato": "6 x 25 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 3.49,
+    "prezzoLitro": 2.33,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "Tourtel Birra Analcolica 3 x 33 cl",
+    "formato": "3 x 33 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 2.19,
+    "prezzoLitro": 2.21,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  },
+  {
+    "nome": "Raffo Lavorazione Grezza Birra 3 x 33 cl",
+    "formato": "3 x 33 cl",
+    "supermercato": "Esselunga",
+    "prezzo": 2.99,
+    "prezzoLitro": 3.02,
+    "offerta": true,
+    "dataRilevazione": "04/10/2026",
+    "fonte": "https://www.prezzinvista.it/esselunga/"
+  }
+]
