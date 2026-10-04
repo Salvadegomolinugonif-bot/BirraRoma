@@ -1,0 +1,37 @@
+[
+  {
+    "supermercato": "Carrefour",
+    "url": "https://www.prezzinvista.it/carrefour/roma/",
+    "tipo": "roma"
+  },
+  {
+    "supermercato": "Conad",
+    "url": "https://www.prezzinvista.it/conad/roma/",
+    "tipo": "roma"
+  },
+  {
+    "supermercato": "Lidl",
+    "url": "https://www.prezzinvista.it/lidl/roma/",
+    "tipo": "roma"
+  },
+  {
+    "supermercato": "PAM",
+    "url": "https://www.prezzinvista.it/pam/roma/",
+    "tipo": "roma"
+  },
+  {
+    "supermercato": "Todis",
+    "url": "https://www.prezzinvista.it/todis/roma/",
+    "tipo": "roma_lazio"
+  },
+  {
+    "supermercato": "Eurospin",
+    "url": "https://www.prezzinvista.it/eurospin/roma/",
+    "tipo": "roma_caveat"
+  },
+  {
+    "supermercato": "Esselunga",
+    "url": "https://www.prezzinvista.it/esselunga/",
+    "tipo": "nazionale_caveat"
+  }
+]

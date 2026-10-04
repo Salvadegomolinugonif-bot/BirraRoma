@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BirraRoma - Confronta i prezzi della birra a Roma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">🍺 BirraRoma</div>
+    <div class="subtitle">Confronta i prezzi della birra nei supermercati di Roma</div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Trova la birra al prezzo migliore</h1>
+        <p>Cerca una birra e confronta i prezzi dei supermercati di Roma.</p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Cerca una birra..."
+            >
+            <button onclick="cercaBirra()">Cerca</button>
+        </div>
+
+        <div class="filters">
+            <select id="supermarketFilter">
+                <option value="Tutti">Tutti i supermercati</option>
+                <option value="Carrefour">Carrefour</option>
+                <option value="Conad">Conad</option>
+                <option value="Coop">Coop</option>
+                <option value="Lidl">Lidl</option>
+                <option value="Esselunga">Esselunga</option>
+                <option value="Eurospin">Eurospin</option>
+                <option value="Todis">Todis</option>
+                <option value="PAM">PAM</option>
+                <option value="ALDI">ALDI</option>
+                <option value="iN's Mercato">iN's Mercato</option>
+            </select>
+        </div>
+
+        <button id="backButton" class="back-button" style="display:none;">
+            ← Tutte le birre
+        </button>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>🔥 Offerte migliori</h2>
+            <span>Roma</span>
+        </div>
+
+        <div id="results" class="beer-grid"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>🍺 BirraRoma</p>
+    <p>Confronta i prezzi della birra a Roma</p>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
